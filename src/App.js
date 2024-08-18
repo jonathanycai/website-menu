@@ -2,10 +2,18 @@ import "./style.css";
 import Menu from "./Menu";
 
 function App() {
+
+  const links = [
+    { title: "Home", href: "/", icon: "home" },
+    { title: "Services", href: "/services", icon: "services" },
+    { title: "Pricing", href: "/pricing", icon: "pricing" },
+    { title: "Blog", href: "/blog", icon: "blog" }
+  ]
+
   return (
     <>
       <header>
-        <Menu />
+        <Menu links={links} />
       </header>
       <main>
         <h1>Welcome to this website</h1>
