@@ -1,5 +1,6 @@
 import "./style.css";
 import Menu from "./Menu";
+import MenuContext from "./Context";
 
 function App() {
 
@@ -11,9 +12,9 @@ function App() {
   ]
 
   return (
-    <>
+    <MenuContext.Provider value={links}>
       <header>
-        <Menu links={links} />
+        <Menu />
       </header>
       <main>
         <h1>Welcome to this website</h1>
@@ -23,7 +24,7 @@ function App() {
         <a href="/contact">Contact</a>
         <a href="//reactquickly.dev">React Quickly 2E</a>
       </footer>
-    </>
+    </MenuContext.Provider>
   );
 }
 
